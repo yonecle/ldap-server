@@ -1,4 +1,4 @@
-FROM centos
+FROM stackbrew/centos
 MAINTAINER yonecle
 
 RUN yum -y install openldap-servers ; yum clean all
