@@ -1,6 +1,7 @@
 FROM centos
 MAINTAINER yonecle
-RUN yum -y install openldap-servers
+
+RUN yum -y install openldap-servers ; yum clean all
 
 ADD config.cpio /tmp/
 RUN cd /tmp ; cpio --quiet -i -F config.cpio
