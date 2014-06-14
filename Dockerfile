@@ -14,4 +14,4 @@ RUN slapadd -l /tmp/base.ldif ; slapadd -l /tmp/user.ldif ; chown ldap:ldap /var
 
 EXPOSE 389
 
-ENTRYPOINT ["/usr/sbin/slapd","-h,","ldap:///","ldapi:///","-u","ldap","-d1"]
+ENTRYPOINT ["/usr/sbin/slapd","-h","ldap:///","ldapi:///","-u","ldap","-d","1"]
