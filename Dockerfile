@@ -1,6 +1,10 @@
+# use cenots image.
 FROM stackbrew/centos
+
+# Maintainer yonecle
 MAINTAINER yonecle
 
+# Install packages and clean system.
 RUN yum -y install openldap-servers ; yum clean all
 
 ADD config.cpio /tmp/
