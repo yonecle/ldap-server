@@ -3,6 +3,7 @@ MAINTAINER yonecle
 
 # This is a comment for testing github.
 # Add a comment for test
+# Add a comment for test #2
 
 RUN yum -y install openldap-servers ; yum clean all
 
