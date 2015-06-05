@@ -3,6 +3,7 @@ MAINTAINER yonecle
 
 # This is a comment for testing github.
 # Add a comment for test
+# Add a comment for test #2
 
 RUN yum -y install openldap-servers ; yum clean all
 
@@ -16,5 +17,8 @@ RUN slapadd -l /tmp/base.ldif ; slapadd -l /tmp/user.ldif ; chown ldap:ldap /var
 # RUN /usr/sbin/slapd -h ldapi:/// -u ldap ; ldapadd -x -H ldapi:/// -D "cn=Manager,dc=ad,dc=example,dc=com" -w redhat -f /tmp/base.ldif
 
 EXPOSE 389
+
+LABEL Vendor="smpn.jp" License=GPLv2
+LABEL Version=1.0
 
 ENTRYPOINT ["/usr/sbin/slapd","-h","ldap:///","ldapi:///","-u","ldap","-d","1"]
