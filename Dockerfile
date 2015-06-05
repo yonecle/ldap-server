@@ -14,4 +14,7 @@ RUN slapadd -l /tmp/base.ldif ; slapadd -l /tmp/user.ldif ; chown ldap:ldap /var
 
 EXPOSE 389
 
+LABEL Vendor="smpn.jp" License=GPLv2
+LABEL Version=1.0
+
 ENTRYPOINT ["/usr/sbin/slapd","-h","ldap:///","ldapi:///","-u","ldap","-d","1"]
