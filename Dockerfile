@@ -1,6 +1,8 @@
 FROM stackbrew/centos
 MAINTAINER yonecle
 
+# This is a comment for testing github.
+
 RUN yum -y install openldap-servers ; yum clean all
 
 ADD config.cpio /tmp/
